@@ -13,4 +13,4 @@ class InputData(BaseModel):
 @app.post("/predict")
 def predict(data: InputData):
     prediction = model.predict(np.array([data.features]))
-    return {"prediction": int(prediction[0])}
+    return {"prediction of the model": int(prediction[0])}
